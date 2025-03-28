@@ -1,0 +1,83 @@
+SELECT
+    *
+FROM OPENROWSET(
+    BULK 'https://olistdatastorageafaizan.blob.core.windows.net/olistdata/silver/',
+    FORMAT = 'PARQUET'
+) AS result1
+
+
+CREATE VIEW gold.sportsleisure AS
+SELECT
+    *
+FROM 
+    OPENROWSET(
+        BULK 'https://olistdatastorageafaizan.blob.core.windows.net/olistdata/silver/',
+        FORMAT = 'PARQUET'
+    ) AS result2
+WHERE product_category_name_english = 'sports_leisure';
+
+SELECT * FROM gold.sportsleisure;
+
+CREATE VIEW gold.healthbeauty AS
+SELECT
+    *
+FROM 
+    OPENROWSET(
+        BULK 'https://olistdatastorageafaizan.blob.core.windows.net/olistdata/silver/',
+        FORMAT = 'PARQUET'
+    ) AS result2
+WHERE product_category_name_english = 'health_beauty';
+
+SELECT * FROM gold.healthbeauty;
+
+CREATE VIEW gold.furnituredecor AS
+SELECT
+    *
+FROM 
+    OPENROWSET(
+        BULK 'https://olistdatastorageafaizan.blob.core.windows.net/olistdata/silver/',
+        FORMAT = 'PARQUET'
+    ) AS result2
+WHERE product_category_name_english = 'furniture_decor';
+
+SELECT * FROM gold.furnituredecor;
+
+CREATE VIEW gold.delayed AS 
+SELECT
+    *
+FROM 
+    OPENROWSET(
+        BULK 'https://olistdatastorageafaizan.blob.core.windows.net/olistdata/silver/',
+        FORMAT = 'PARQUET'
+    ) AS result2
+WHERE delay > 0;
+
+-- Query to preview the delayed orders
+SELECT * FROM gold.delayed;
+
+CREATE VIEW gold.delivered
+AS
+SELECT
+    *
+FROM 
+    OPENROWSET(
+    BULK 'https://olistdatastorageafaizan.blob.core.windows.net/olistdata/silver/',
+    FORMAT = 'PARQUET'
+    ) AS result2
+WHERE order_status = 'delivered'
+
+SELECT * FROM gold.delivered
+
+CREATE SCHEMA gold
+
+CREATE VIEW gold.final
+AS
+SELECT
+    *
+FROM 
+    OPENROWSET(
+    BULK 'https://olistdatastorageafaizan.blob.core.windows.net/olistdata/silver/',
+    FORMAT = 'PARQUET'
+    ) AS result1
+
+SELECT * FROM gold.final
