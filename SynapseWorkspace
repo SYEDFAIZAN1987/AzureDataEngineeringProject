@@ -1,0 +1,55 @@
+{
+    "properties": {
+        "settings": {
+            "azureADOnlyAuthentication": {
+                "value": false,
+                "state": "Consistent"
+            }
+        },
+        "defaultDataLakeStorage": {
+            "resourceId": "/subscriptions/804e4f75-8b45-4e6f-a021-45532b86040e/resourceGroups/faizanbigdata/providers/Microsoft.Storage/storageAccounts/synapsestoragefaizan",
+            "createManagedPrivateEndpoint": false,
+            "accountUrl": "https://synapsestoragefaizan.dfs.core.windows.net",
+            "filesystem": "synapsefilesysfaizan"
+        },
+        "encryption": {
+            "doubleEncryptionEnabled": false
+        },
+        "provisioningState": "Succeeded",
+        "managedVirtualNetwork": "default",
+        "connectivityEndpoints": {
+            "web": "https://web.azuresynapse.net?workspace=%2fsubscriptions%2f804e4f75-8b45-4e6f-a021-45532b86040e%2fresourceGroups%2ffaizanbigdata%2fproviders%2fMicrosoft.Synapse%2fworkspaces%2folistsynapsewworkspace",
+            "dev": "https://olistsynapsewworkspace.dev.azuresynapse.net",
+            "sqlOnDemand": "olistsynapsewworkspace-ondemand.sql.azuresynapse.net",
+            "sql": "olistsynapsewworkspace.sql.azuresynapse.net"
+        },
+        "managedResourceGroupName": "olistsynapsemanagedgrp",
+        "sqlAdministratorLogin": "olistuser",
+        "privateEndpointConnections": [],
+        "workspaceUID": "03528696-cf8f-43f4-9c74-2904cb53cf1b",
+        "extraProperties": {
+            "WorkspaceType": "Normal",
+            "IsScopeEnabled": false
+        },
+        "managedVirtualNetworkSettings": {
+            "preventDataExfiltration": false
+        },
+        "publicNetworkAccess": "Enabled",
+        "cspWorkspaceAdminProperties": {
+            "initialWorkspaceAdminObjectId": "e26723b7-5999-4f68-a87e-ffcd1236afa4"
+        },
+        "azureADOnlyAuthentication": false,
+        "trustedServiceBypassEnabled": false
+    },
+    "type": "Microsoft.Synapse/workspaces",
+    "id": "/subscriptions/804e4f75-8b45-4e6f-a021-45532b86040e/resourceGroups/faizanbigdata/providers/Microsoft.Synapse/workspaces/olistsynapsewworkspace",
+    "location": "eastus2",
+    "name": "olistsynapsewworkspace",
+    "identity": {
+        "type": "SystemAssigned",
+        "tenantId": "a9429d1d-0d91-496b-b9bb-1bd49ba87948",
+        "principalId": "d8e97d51-8b3f-44c8-a010-854251520049"
+    },
+    "tags": {},
+    "apiVersion": "2021-06-01"
+}
