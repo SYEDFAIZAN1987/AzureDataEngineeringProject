@@ -104,6 +104,115 @@ Key KPIs and metrics were computed using PySpark and visualized in Power BI:
 
 ---
 
+# Convert the extracted report text into Markdown and save as README.md
+markdown_path = "/mnt/data/README.md"
+
+markdown_text = """
+# 📊 Azure Data Engineering Portfolio Project – Olist E-Commerce Dataset
+
+## 👨‍💻 Author
+**Syed Faizan**  
+📅 March 28, 2025
+
+---
+
+## 📚 Table of Contents
+1. [Introduction](#introduction)
+2. [Project Summary](#project-summary)
+3. [Architecture Overview](#architecture-overview)
+4. [Repository and Data Sources](#repository-and-data-sources)
+5. [Data Lake Zones and Pipelines](#data-lake-zones-and-pipelines)
+6. [Power BI Dashboard](#power-bi-dashboard)
+7. [Exploratory Data Analysis](#exploratory-data-analysis)
+8. [Insights and Advanced Analytics](#insights-and-advanced-analytics)
+9. [Results and Conclusions](#results-and-conclusions)
+10. [References](#references)
+
+---
+
+## 📌 Introduction
+This project explores a large-scale e-commerce dataset from the Olist platform using tools from the Azure ecosystem. It involves data ingestion, transformation, enrichment, and visualization to identify trends, inefficiencies, and correlations for business insights.
+
+---
+
+## 📦 Project Summary
+- Addressed logistics inefficiencies using transactional and behavioral e-commerce data
+- Used Azure ADF, Databricks (PySpark), ADLS Gen2, Synapse Analytics, and Power BI
+- Integrated MySQL and MongoDB data sources
+- Identified delays, freight-payment correlations, seller performance, and state-level disparities
+
+---
+
+## 🏗️ Architecture Overview
+A data lakehouse pipeline was built using:
+- **Ingestion**: ADF with JSON configs from GitHub and SQL sources
+- **Storage**: ADLS Gen2 with Bronze/Silver/Gold layers
+- **Transformation**: Azure Databricks with PySpark
+- **Serving**: Azure Synapse SQL and Power BI
+
+---
+
+## 🔗 Repository and Data Sources
+- GitHub hosts CSV data files
+- Filess.io supports hybrid SQL (MySQL) and NoSQL (MongoDB)
+- Normalized ERD ensures relational joins for OLAP and ETL operations
+
+---
+
+## 🗂️ Data Lake Zones and Pipelines
+- **Bronze Layer**: Raw CSVs stored in Blob Storage
+- **Silver Layer**: Cleaned & transformed records
+- **Gold Layer**: Aggregated, curated datasets for BI
+- ADF uses Lookup-ForEach-Copy with JSON parameters
+
+---
+
+## 📊 Power BI Dashboard
+- KPIs: Avg Delay, Avg Payment, Product/Customer Count
+- State-wise delivery & payment comparisons
+- Trendlines, scatterplots, heatmaps for visual storytelling
+
+---
+
+## 📈 Exploratory Data Analysis
+- **Top Delay Categories**: Fashion clothing, Cine photo
+- **Top Revenue Categories**: Bed bath table, Health beauty
+- **Most Used Payment**: Credit cards (87,776)
+- **High Customer States**: SP, RJ, MG
+- **Best Rated**: CDs/DVDs, Books
+
+---
+
+## 🔬 Insights and Advanced Analytics
+- Freight value ↑ leads to early delivery
+- More product images → lower delay
+- Delay ~ correlated with delivery estimates
+- Geographic disparities in delay and freight cost
+- High-value items → more payment installments
+- Negative delays common across Brazil
+
+---
+
+## ✅ Results and Conclusions
+- Actual deliveries were much faster than estimates (up to 37 days earlier)
+- Freight value (r = 0.74) and product value are strongly correlated
+- Top product categories and high-revenue sellers were identified
+- Consistent delivery improvements from 2016–2018
+- 97.13% orders were successfully delivered
+- Recommendations: dynamic freight pricing, better metadata, predictive delivery modeling
+
+---
+
+## 📚 References
+- Chapman, G. (2016). *Data analysis for business, economics, and policy*. Springer.
+- Chen, H. et al. (2012). *MIS Quarterly*, 36(4), 1165–1188.
+- Microsoft Docs (2023). [Azure Data Factory Documentation](https://learn.microsoft.com/en-us/azure/data-factory/introduction)
+- Gandomi & Haider (2015). *Int. J. of Information Management*, 35(2), 137–144.
+"""
+
+
+
+
 ## 📚 Author
 
 **Syed Faizan**  
