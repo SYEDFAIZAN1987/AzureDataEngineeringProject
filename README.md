@@ -104,11 +104,7 @@ Key KPIs and metrics were computed using PySpark and visualized in Power BI:
 
 ---
 
-# Convert the extracted report text into Markdown and save as README.md
-markdown_path = "/mnt/data/README.md"
 
-markdown_text = """
-# 📊 Azure Data Engineering Portfolio Project – Olist E-Commerce Dataset
 
 ## 👨‍💻 Author
 **Syed Faizan**  
