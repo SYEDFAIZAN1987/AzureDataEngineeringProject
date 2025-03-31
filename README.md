@@ -110,7 +110,7 @@ Key KPIs and metrics were computed using PySpark and visualized in Power BI:
 MPS in Analytics – Applied Machine Learning  
 Northeastern University  
 📍 Toronto, Ontario, Canada  
-✉️ sfaizans1987@gmail.com
+✉️ faizan.s@northeastern.edu
 
 ---
 
